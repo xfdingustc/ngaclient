@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="style_color_primary">#F7E1A2</color>
+    <color name="style_color_primary_dark">#551200</color>
+    <color name="style_color_accent">#551200</color>
+
+    <color name="topic_row1">#fff8e5</color>
+    <color name="topic_row2">#fef3d1</color>
+
+    <color name="article_row1">#fff8e5</color>
+    <color name="article_row2">#fef3d1</color>
+</resources>

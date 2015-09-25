@@ -1,16 +1,30 @@
-package com.xfdingustc.ngaclient;
+package com.xfdingustc.ngaclient.ui;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class MainActivity extends AppCompatActivity {
+import com.xfdingustc.ngaclient.R;
+
+public class MainActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        init();
+
+    }
+
+    @Override
+    protected void init() {
+        super.init();
+        initViews();
+    }
+
+    private void initViews() {
         setContentView(R.layout.activity_main);
+        setupToolbar();
     }
 
     @Override
