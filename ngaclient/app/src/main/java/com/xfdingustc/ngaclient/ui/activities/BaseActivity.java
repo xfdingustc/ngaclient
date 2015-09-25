@@ -1,4 +1,4 @@
-package com.xfdingustc.ngaclient.ui;
+package com.xfdingustc.ngaclient.ui.activities;
 
 /**
  * Created by Xiaofei on 2015/9/25.
