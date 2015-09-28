@@ -55,7 +55,6 @@ public class ForumGroupPagerFragment extends Fragment {
         mForumListAdapter = new ForumListAdapter(getActivity());
         mRvForumList.setAdapter(mForumListAdapter);
 
-        //BoardHolder holder = BoardHolder.getHolder();
         mForumListAdapter.setForumList(mForumGroup.getForumList());
     }
 }

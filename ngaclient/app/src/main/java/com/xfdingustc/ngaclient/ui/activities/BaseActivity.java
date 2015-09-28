@@ -18,6 +18,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.transition.TransitionManager;
 
+import com.android.volley.RequestQueue;
 import com.xfdingustc.ngaclient.R;
 
 import butterknife.Bind;
@@ -31,6 +32,7 @@ public class BaseActivity extends AppCompatActivity {
     @Nullable
     @Bind(R.id.toolbar)
     Toolbar mToolbar;
+
 
     @Override
     public void setContentView(int layoutResID) {

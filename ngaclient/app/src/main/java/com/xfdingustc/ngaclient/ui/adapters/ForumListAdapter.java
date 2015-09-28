@@ -12,6 +12,7 @@ import android.widget.TextView;
 import com.orhanobut.logger.Logger;
 import com.xfdingustc.ngaclient.R;
 import com.xfdingustc.ngaclient.forum.Forum;
+import com.xfdingustc.ngaclient.ui.activities.TopicListActivity;
 
 import java.util.List;
 
@@ -80,6 +81,9 @@ public class ForumListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
     }
 
     private void lauchTopicListActivity(int position) {
+        Forum forum = mForumList.get(position);
+        TopicListActivity.launch(mContext, forum);
+
         /*
         String fidString = mBoardCategory.get(position).getUrl();
 
