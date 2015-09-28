@@ -96,9 +96,6 @@ public class TopicListActivity extends BaseActivity {
             @Override
             public void onResponse(JSONObject response) {
 
-                String encoding = "GBK";
-                Logger.t(TAG).d("encoding: " + encoding);
-
                 onHandleTopicListResponse(response.toString());
 
             }
