@@ -95,7 +95,7 @@ public class TopicListActivity extends BaseActivity {
         NgaClientJsonObjectRequest request = new NgaClientJsonObjectRequest(requestUrl, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
-
+                //Logger.t(TAG).json(response.toString());
                 onHandleTopicListResponse(response.toString());
 
             }

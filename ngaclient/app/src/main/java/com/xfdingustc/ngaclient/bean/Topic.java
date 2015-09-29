@@ -10,12 +10,19 @@ import com.xfdingustc.ngaclient.utils.ToStringUtils;
 public class Topic {
 
     @Expose
-    @SerializedName("subject")
-    private String mSubject;
+    @SerializedName("tid")
+    public int id;
 
-    public String getSubject() {
-        return mSubject;
-    }
+    @Expose
+    public String subject;
+
+    @Expose
+    public String author;
+
+    @Expose
+    @SerializedName("tpcurl")
+    public String url;
+
 
     @Override
     public String toString() {

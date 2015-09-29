@@ -10,6 +10,8 @@ public class Constants {
 
     public static final String API_THREAD = HOST_URL + "/thread.php";
 
+    public static final String API_READ = HOST_URL + "/read.php";
+
     public static String MODEL = android.os.Build.MODEL.toUpperCase(Locale.US);
 
     public static String MANUFACTURER = android.os.Build.MANUFACTURER.toUpperCase(Locale.US);
