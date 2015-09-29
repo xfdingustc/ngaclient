@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 import android.widget.TextView;
 
 import com.xfdingustc.ngaclient.R;
@@ -45,7 +46,7 @@ public class ReplyListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
 
         ReplyListItemViewHolder viewHolder = (ReplyListItemViewHolder)holder;
 
-        viewHolder.tvReply.setText(reply.content);
+        viewHolder.wvReply.loadDataWithBaseURL(null, reply.content, "text/html", "utf-8", null);
     }
 
     @Override
@@ -55,8 +56,8 @@ public class ReplyListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
 
     public class ReplyListItemViewHolder extends RecyclerView.ViewHolder {
 
-        @Bind(R.id.tvReply)
-        TextView tvReply;
+        @Bind(R.id.wvReply)
+        WebView wvReply;
 
         public ReplyListItemViewHolder(View itemView) {
             super(itemView);

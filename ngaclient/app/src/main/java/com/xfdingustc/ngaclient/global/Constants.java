@@ -6,7 +6,8 @@ import java.util.Locale;
  * Created by Xiaofei on 2015/9/28.
  */
 public class Constants {
-    public static final String HOST_URL = "http://nga.178.com";
+    //public static final String HOST_URL = "http://nga.178.com";
+    public static final String HOST_URL = "http://bbs.ngacn.cc";
 
     public static final String API_THREAD = HOST_URL + "/thread.php";
 
