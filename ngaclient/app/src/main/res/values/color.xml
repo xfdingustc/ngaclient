@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="style_color_primary">#F7E1A2</color>
-    <color name="style_color_primary_dark">#551200</color>
-    <color name="style_color_accent">#551200</color>
+    <color name="style_color_primary">#fffbed</color>
+    <color name="style_color_primary_dark">#fff1c9</color>
+    <color name="style_color_accent">#804a32</color>
 
-    <color name="topic_row1">#fff8e5</color>
-    <color name="topic_row2">#fef3d1</color>
+    <color name="style_color_accent_light">#BFa28f</color>
 
-    <color name="article_row1">#fff8e5</color>
-    <color name="article_row2">#fef3d1</color>
+    <color name="divider">#ead297</color>
+
 </resources>
