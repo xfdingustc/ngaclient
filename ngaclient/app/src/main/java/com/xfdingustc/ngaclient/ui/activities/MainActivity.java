@@ -3,6 +3,8 @@ package com.xfdingustc.ngaclient.ui.activities;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -14,17 +16,27 @@ import com.xfdingustc.ngaclient.ui.adapters.ForumGroupPagerAdapter;
 import java.util.List;
 
 import butterknife.Bind;
+import butterknife.OnClick;
 
 public class MainActivity extends BaseActivity {
     private static final String TAG = MainActivity.class.getSimpleName();
 
     private ForumGroupPagerAdapter mForumGroupPagerAdater;
+    private ActionBarDrawerToggle mDrawerToggle;
+
+    @Bind(R.id.drawer_layout)
+    DrawerLayout mDrawerLayout;
 
     @Bind(R.id.forumGroupPager)
     ViewPager mForumGroupPager;
 
     @Bind(R.id.tabs)
     TabLayout mTabLayout;
+
+    @OnClick(R.id.civUserAvatar)
+    public void onUserAvatarClicked() {
+        LoginActivity.launch(this);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +55,13 @@ public class MainActivity extends BaseActivity {
         setContentView(R.layout.activity_main);
         setupToolbar();
         setupForumGroupPager();
+        setupActionBarToggle();
+    }
+
+    @Override
+    protected void setupToolbar() {
+
+        super.setupToolbar();
     }
 
     private void setupForumGroupPager() {
@@ -55,6 +74,16 @@ public class MainActivity extends BaseActivity {
 
         mForumGroupPager.setAdapter(mForumGroupPagerAdater);
         mTabLayout.setupWithViewPager(mForumGroupPager);
+    }
+
+
+    private void setupActionBarToggle() {
+        mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, mToolbar, R.string
+            .drawer_open, R.string.drawer_close);
+        mDrawerLayout.setDrawerListener(mDrawerToggle);
+
+        mDrawerToggle.syncState();
+
     }
 
     @Override

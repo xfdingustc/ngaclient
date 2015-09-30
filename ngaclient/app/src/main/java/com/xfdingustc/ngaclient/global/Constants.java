@@ -9,6 +9,9 @@ public class Constants {
     //public static final String HOST_URL = "http://nga.178.com";
     public static final String HOST_URL = "http://bbs.ngacn.cc";
 
+    public static final String API_LOGIN = "http://account.178.com/q_account" +
+        ".php?_act=login&print=login";
+
     public static final String API_THREAD = HOST_URL + "/thread.php";
 
     public static final String API_READ = HOST_URL + "/read.php";

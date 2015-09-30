@@ -6,6 +6,9 @@ package com.xfdingustc.ngaclient.global;
 public class JsonTag {
     public static final String DATA = "data";
 
+    public static final String EMAIL = "email";
+    public static final String PASSWORD = "password";
+
 
     public static final String REPLY_ROWS = "__R__ROWS";
     public static final String REPLY = "__R";

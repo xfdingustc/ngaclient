@@ -41,7 +41,7 @@ public class TopicListActivity extends BaseActivity {
     private static final String JSON_TAG_TOPIC = "__T";
     private static final String JSON_TAG_TOPIC_COUNT = "__T__ROWS";
 
-    private RequestQueue mRequestQueue;
+
     private String mForumId;
 
     @Bind(R.id.rvTopicList)
@@ -65,8 +65,6 @@ public class TopicListActivity extends BaseActivity {
     protected void init() {
         super.init();
         mForumId = getIntent().getStringExtra(EXTRA_FID);
-        mRequestQueue = Volley.newRequestQueue(this);
-        mRequestQueue.start();
         initViews();
     }
 

@@ -4,6 +4,7 @@ package com.xfdingustc.ngaclient.ui.activities;
  * Created by Xiaofei on 2015/9/25.
  */
 
+import android.app.DownloadManager;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -19,6 +20,7 @@ import android.support.v7.widget.Toolbar;
 import android.transition.TransitionManager;
 
 import com.android.volley.RequestQueue;
+import com.android.volley.toolbox.Volley;
 import com.xfdingustc.ngaclient.R;
 
 import butterknife.Bind;
@@ -28,6 +30,8 @@ import butterknife.ButterKnife;
  * Created by Xiaofei on 2015/9/22.
  */
 public class BaseActivity extends AppCompatActivity {
+
+    protected RequestQueue mRequestQueue;
 
     @Nullable
     @Bind(R.id.toolbar)
@@ -49,7 +53,8 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     protected void init() {
-
+        mRequestQueue = Volley.newRequestQueue(this);
+        mRequestQueue.start();
     }
 }
 

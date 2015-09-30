@@ -22,6 +22,11 @@ public class NgaClientJsonObjectRequest extends JsonObjectRequest {
         super(url, listener, errorListener);
     }
 
+    public NgaClientJsonObjectRequest(int method, String url, String requestBody,
+                                      Response.Listener<JSONObject> listener, Response.ErrorListener errorListener) {
+        super(method, url, requestBody, listener, errorListener);
+    }
+
 
     @Override
     public Map<String, String> getHeaders() throws AuthFailureError {

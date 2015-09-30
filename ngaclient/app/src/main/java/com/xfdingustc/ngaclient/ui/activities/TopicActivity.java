@@ -6,10 +6,8 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.android.volley.toolbox.Volley;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.orhanobut.logger.Logger;
@@ -38,9 +36,7 @@ public class TopicActivity extends BaseActivity {
     private static final String EXTRA_TOPIC_URL = "topic_url";
 
 
-
     private String mTopicUrl;
-    private RequestQueue mRequestQueue;
 
     @Bind(R.id.rvReplyList)
     RecyclerView mRvReplyList;
@@ -65,8 +61,6 @@ public class TopicActivity extends BaseActivity {
     protected void init() {
         super.init();
         mTopicUrl = getIntent().getStringExtra(EXTRA_TOPIC_URL);
-        mRequestQueue = Volley.newRequestQueue(this);
-        mRequestQueue.start();
         initViews();
     }
 
